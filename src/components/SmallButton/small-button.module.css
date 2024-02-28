@@ -1,0 +1,119 @@
+@import url('../../index.css');
+
+.primary, .primary-active, .primary-disabled, .primary-hover {
+  display: inline-flex;
+  padding: var(--spacing-s-2, 0.8rem) var(--spacing-s-4, 1.6rem);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-s-2, 0.8rem);
+  border-radius: 3.5rem;
+  transition: all .3s;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  color: transparent;
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem; /* 133.333% */
+  letter-spacing: 0.01rem;
+}
+
+.primary {
+  background: transparent;
+  color: var(--y-btn-text, #333B48);
+}
+
+.primary:hover, .primary-hover {
+  background: var(--y-btn-bg, #FFF);
+  color: var(--y-btn-hover-text, #4D596A);
+}
+
+
+.primary-active {
+  background: var(--y-btn-primary-text, #0051FF);
+  cursor: pointer;
+  color: var(--y-text-inverse, #FFF);
+}
+
+.primary-active:hover {
+  background: var(--y-btn-primary-hover-bg);
+}
+
+.primary-disabled {
+  background: var(--y-btn-bg, #FFF);
+  cursor: not-allowed;
+  color: var(--y-btn-generic-disabled-text, #A0A2A7);
+}
+
+.secondary, .secondary-active, .secondary-disabled, .secondary-hover, .outline {
+  display: inline-flex;
+  padding: var(--spacing-s-2, 0.8rem) 1.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-s-2, 0.8rem);
+  border-radius: 1.8rem;
+  background: var(--y-bg-light, #FFF);
+  transition: all .3s;
+  box-sizing: border-box;
+  color: transparent;
+  /* Label/m */
+  font-family: Roboto;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6rem; /* 123.077% */
+  letter-spacing: 0.05rem;
+}
+
+.secondary {
+  background: var(--y-bg-light, #FFF);
+  color: var(--y-btn-text, #333B48);
+}
+
+.secondary:hover, .secondary-hover, .outline:hover {
+  background: var(--y-bg-20, #F2F3F6);
+  color: var(--y-btn-hover-text, #4D596A);
+}
+
+.secondary-active {
+  background: var(--y-text-primary, #333B48);
+  color: var(--y-text-inverse, #FFF);
+}
+
+.secondary-disabled {
+  cursor: not-allowed;
+  background: var(--y-bg-light, #FFF);
+  color: var(--y-btn-generic-disabled-text, #A0A2A7);
+}
+
+.outline {
+  border: 2px solid var(--y-btn-border, #EDEFF2);
+  background: var(--y-btn-bg, #FFF);
+  color: var(--y-btn-text, #333B48);
+}
+
+.tertiary {
+  display: inline-flex;
+  padding: var(--spacing-s-2, 0.8rem) var(--spacing-s-3, 1.2rem);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-s-2, 0.8rem);
+  border-radius: var(--border-b-rad-6, 3rem);
+  background: transparent;
+  transition: all .3s;
+  box-sizing: border-box;
+  color: var(--y-bg-brand, #0051FF);
+  /* Label/l */
+  font-family: Roboto;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem; /* 133.333% */
+  letter-spacing: 0.01rem;
+}
+
+.tertiary:hover {
+  background: var(--y-bg-light, #FFF);
+}
