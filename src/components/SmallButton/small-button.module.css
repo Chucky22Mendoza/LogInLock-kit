@@ -10,7 +10,6 @@
   transition: all .3s;
   box-sizing: border-box;
   cursor: pointer;
-
   color: transparent;
   font-family: Roboto;
   font-size: 1.5rem;
@@ -30,9 +29,8 @@
   color: var(--y-btn-hover-text, #4D596A);
 }
 
-
 .primary-active {
-  background: var(--y-btn-primary-text, #0051FF);
+  background: var(--y-btn-primary-text);
   cursor: pointer;
   color: var(--y-text-inverse, #FFF);
 }
@@ -47,7 +45,8 @@
   color: var(--y-btn-generic-disabled-text, #A0A2A7);
 }
 
-.secondary, .secondary-active, .secondary-disabled, .secondary-hover, .outline {
+.secondary, .secondary-active, .secondary-disabled, .secondary-hover,
+.outline, .outline-active, .outline-disabled, .outline-hover {
   display: inline-flex;
   padding: var(--spacing-s-2, 0.8rem) 1.4rem;
   justify-content: center;
@@ -88,13 +87,38 @@
   color: var(--y-btn-generic-disabled-text, #A0A2A7);
 }
 
-.outline {
+.outline, .outline-active, .outline-disabled, .outline-hover {
   border: 2px solid var(--y-btn-border, #EDEFF2);
+}
+
+.outline {
   background: var(--y-btn-bg, #FFF);
   color: var(--y-btn-text, #333B48);
 }
 
-.tertiary {
+
+.outline-hover {
+  background: var(--y-btn-bg, #FFF);
+  color: var(--y-btn-hover-text, #4D596A);
+}
+
+.outline-active {
+  background: var(--y-btn-primary-text);
+  cursor: pointer;
+  color: var(--y-text-inverse, #FFF);
+}
+
+.outline-active:hover {
+  background: var(--y-btn-primary-hover-bg);
+}
+
+.outline-disabled {
+  background: var(--y-btn-bg, #FFF);
+  cursor: not-allowed;
+  color: var(--y-btn-generic-disabled-text, #A0A2A7);
+}
+
+.tertiary, .tertiary-active, .tertiary-disabled, .tertiary-hover {
   display: inline-flex;
   padding: var(--spacing-s-2, 0.8rem) var(--spacing-s-3, 1.2rem);
   justify-content: center;
@@ -104,7 +128,7 @@
   background: transparent;
   transition: all .3s;
   box-sizing: border-box;
-  color: var(--y-bg-brand, #0051FF);
+  color: var(--y-bg-brand);
   /* Label/l */
   font-family: Roboto;
   font-size: 1.5rem;
@@ -114,6 +138,18 @@
   letter-spacing: 0.01rem;
 }
 
-.tertiary:hover {
-  background: var(--y-bg-light, #FFF);
+.tertiary:hover, .tertiary-hover {
+  background: #FFF;
+  color: var(--y-btn-action-hover-text);
+}
+
+.tertiary:active, .tertiary-active {
+  background: var(--y-btn-action-active-bg);
+  color: var(--y-bg-brand);
+}
+
+.tertiary:disabled, .tertiary-disabled {
+  background: var(--y-btn-action-active-bg);
+  color: var(--y-bg-light);
+  cursor: not-allowed;
 }

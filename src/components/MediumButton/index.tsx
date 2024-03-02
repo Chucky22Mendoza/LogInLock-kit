@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './small-button.module.css';
+import styles from './medium-button.module.css';
 
 // Props de botón
 type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -13,9 +13,8 @@ type AnchorProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 const hasHref = (props: ButtonProps | AnchorProps): props is AnchorProps => 'href' in props;
 
-export type SmallButtonProps = (ButtonProps | AnchorProps) & {
-  type: 'primary' | 'secondary' | 'tertiary' | 'outline';
-  state?: 'active' | 'disabled' | 'hover' | 'default';
+export type MediumButtonProps = (ButtonProps | AnchorProps) & {
+  type: 'primary' | 'secondary' | 'tertiary' | 'outline' | 'delete' | 'disabled';
   text?: string | null;
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   styleSheet?: React.CSSProperties | undefined;
@@ -29,7 +28,6 @@ export type SmallButtonProps = (ButtonProps | AnchorProps) & {
  * @example
  * const buttonProps = {
  *   type: 'primary',
- *   state: 'default',
  *   text: 'Click me',
  *   onClick: () => {
  *     console.log('Button clicked');
@@ -41,42 +39,39 @@ export type SmallButtonProps = (ButtonProps | AnchorProps) & {
  *   children: <span>Click me</span>,
  * };
  *
- * <SmallButton {...buttonProps} />
+ * <MediumButton {...buttonProps} />
  *
  * @param {Object} props - The component props.
  * @param {string} props.type - The type of the button. Can be one of 'primary', 'secondary', 'tertiary', or 'outline'.
- * @param {string} [props.state="default"] - The state of the button. Can be one of 'active', 'disabled', 'hover' or 'default'.
  * @param {string} [props.text=null] - The text to be displayed on the button. If not provided, the children element will be used.
  * @param {function} [props.onClick=()=>{}] - The click event handler for the button.
  * @param {Object} [props.styleSheet={}] - The styles for the button.
  * @param {ReactNode} [props.children] - The children element to be rendered inside the button.
  *
- * @returns {JSX.Element} The rendered SmallButton component.
+ * @returns {JSX.Element} The rendered MediumButton component.
  */
-function SmallButton({
+function MediumButton({
   type,
-  state = 'default',
   text = null,
-  onClick = () => {},
+  onClick = () => { },
   styleSheet = {},
   children,
   ...args
-}: SmallButtonProps): JSX.Element {
-  const classRender = `${type}${state && state !== 'default' ? `-${state}` : ''}`;
+}: MediumButtonProps): JSX.Element {
   // renderizado de anchor
   if (hasHref(args)) {
     return (
-      <a {...args as AnchorProps} style={styleSheet} className={styles[classRender]}>
+      <a {...args as AnchorProps} style={styleSheet} className={`${styles.medium} ${styles[type]}`}>
         {text || children}
       </a>
     );
   }
   // renderizado de botón
   return (
-    <button {...args as ButtonProps} style={styleSheet} className={styles[classRender]} onClick={onClick}>
+    <button {...args as ButtonProps} style={styleSheet} className={`${styles.medium} ${styles[type]}`} onClick={onClick}>
       {text || children}
     </button>
   );
 }
 
-export default SmallButton;
+export default MediumButton;

@@ -1,0 +1,50 @@
+@import url('../index.css');
+
+.wrap {
+  display: inline-flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.spinner {
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top: 2px solid var(--y-bg-brand);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.wrap > label {
+  color: var(--y-bg-brand);
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 1.5rem;
+  transition: all .2s;
+}
+
+.spinner.xs {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.spinner.sm {
+  width: 2rem;
+  height: 2rem;
+}
+.spinner.md {
+  width: 3rem;
+  height: 3rem;
+}
+.spinner.lg {
+  width: 4rem;
+  height: 4rem;
+}
+.spinner.xl {
+  width: 5rem;
+  height: 5rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
