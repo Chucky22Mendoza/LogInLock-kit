@@ -46,9 +46,7 @@ type TabsProps = {
 };
 
 type TabProps = {
-  badge: {
-    children?: React.ReactElement;
-  },
+  badge: BadgeProps;
   content?: React.ReactElement;
   disabled?: boolean;
   label: string;
