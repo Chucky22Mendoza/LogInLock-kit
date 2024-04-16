@@ -27,6 +27,12 @@ interface TagProps extends IStylesElements {
   endIcon?: React.ReactElement;
 };
 
+interface FavProps extends IStylesElements {
+  size: 'md' | 'lg';
+  isFav?: boolean;
+  onClick?: (event: Event) => void;
+}
+
 interface TooltipProps extends IStylesElements {
   value: string;
   placement?: 'top' | 'bottom' | 'left' | 'right';
