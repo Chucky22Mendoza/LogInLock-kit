@@ -263,19 +263,6 @@ html {
   display: none;
 }
 
-/* ::-webkit-scrollbar {
-  width: 1rem;
-}
-
-::-webkit-scrollbar-track {
-  background-color: rgba(0, 128, 255, 0.15);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--y-bg-brand);
-  border-radius: 0.5rem;
-} */
-
 body,
 h1,
 h2,

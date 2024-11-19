@@ -1,64 +1,49 @@
-interface IStylesElements {
+/// <reference types="react" />
+
+/**
+ * Represents the properties that can be applied to a global element.
+ *
+ * @property {React.CSSProperties} [style] - Optional CSS properties to apply to the element.
+ * @property {string} [className] - Optional CSS class name to apply to the element.
+ */
+export type GlobalElementProps = {
   style?: React.CSSProperties;
   className?: string;
 }
 
-interface DividerProps extends IStylesElements {
-  size: 'thin' | 'thick';
-  direction?: 'horizontal' | 'vertical';
-}
-
-interface BadgeProps extends IStylesElements {
-  variant: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-  label?: string;
-  size?: 'md' | 'lg';
-  children?: React.ReactNode;
-};
-
-interface SpinnerProps extends IStylesElements {
-  size: 'xl'| 'lg' | 'md' | 'sm' | 'xs';
-  label?: string;
-};
-
-interface TagProps extends IStylesElements {
+export type TagProps = GlobalElementProps & {
   variant: 'primary' | 'secondary' | 'outlined' | 'success' | 'warning' | 'danger';
-  children: string;
+  children: React.ReactNode;
   startIcon?: React.ReactElement;
   endIcon?: React.ReactElement;
-};
-
-interface FavProps extends IStylesElements {
-  size: 'md' | 'lg';
-  isFav?: boolean;
-  onClick?: (event: Event) => void;
 }
 
-interface TooltipProps extends IStylesElements {
+export type TooltipProps = GlobalElementProps & {
   value: string;
   placement?: 'top' | 'bottom' | 'left' | 'right';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
-};
+}
 
-interface TabsProps extends IStylesElements {
+export type TabsProps = GlobalElementProps & {
   items: TabProps[];
-};
+}
 
-interface TabProps extends IStylesElements {
+export type TabProps = GlobalElementProps & {
   badge: BadgeProps;
   content?: React.ReactElement;
   disabled?: boolean;
   label: string;
   startIcon?: React.ReactElement;
-};
+}
 
-interface RateProps extends IStylesElements {
+export type RateProps = GlobalElementProps & {
   value?: number;
   stars?: number;
   label?: string;
-};
+}
 
-interface InputProps extends IStylesElements {
+export type InputProps = GlobalElementProps & {
   id?: string;
   label?: string;
   placeholder?: string;
@@ -69,21 +54,21 @@ interface InputProps extends IStylesElements {
   defaultValue?: string;
   disabled?: boolean;
   error?: boolean;
-};
+}
 
-interface ButtonOrAnchorProps extends IStylesElements {
+export type ButtonOrAnchorProps = GlobalElementProps & {
   variant: 'primary' | 'secondary' | 'outlined' | 'success' | 'danger' | 'warning';
   size?: 'lg' | 'md';
   href?: string;
   startIcon?: React.ReactElement;
   endIcon?: React.ReactElement;
   children: React.ReactElement;
-};
+}
 
-interface AvatarProps extends IStylesElements {
+export type AvatarProps = GlobalElementProps & {
   size: 'md' | 'sm';
   shape?: 'circle' | 'square';
   src?: string;
   badge?: boolean;
   children?: React.ReactElement;
-};
+}
