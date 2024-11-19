@@ -132,6 +132,49 @@ function App() {
 
 ---
 
+Here’s your updated README with the new **Button** component documentation translated into English:
+
+---
+
+### 🔘 **Button**
+
+A flexible component that acts as a button or a link, depending on the provided props.
+
+#### Usage:
+
+```tsx
+import { Button } from 'loginlock-kit';
+
+function App() {
+  return (
+    <div>
+      <Button variant="primary" size="md">
+        Click Me
+      </Button>
+      <Button variant="outlined" size="lg" startIcon={<Icon />} endIcon={<Icon />}>
+        With Icons
+      </Button>
+      <Button href="https://example.com" variant="text" size="sm">
+        Go to Example
+      </Button>
+    </div>
+  );
+}
+```
+
+#### Props:
+
+- **`size`** (optional): Defines the button size. Possible values: `"sm"`, `"md"`, `"lg"`. Defaults to `"md"`.
+- **`variant`** (optional): Defines the button style. Possible values: `"primary"`, `"outlined"`, `"text"`. Defaults to `"primary"`.
+- **`startIcon`** (optional): An icon rendered at the beginning of the button content.
+- **`endIcon`** (optional): An icon rendered at the end of the button content.
+- **`children`** (optional): The button or link content, such as text or elements.
+- **`href`** (optional): If provided, the component behaves as a link (`<a>`).
+- **`className`** (optional): Additional CSS class for custom styling.
+- **`style`** (optional): Inline styles for further customization.
+
+---
+
 ## Scripts
 
 - `npm run dev`: Starts the development server using **Vite**.
