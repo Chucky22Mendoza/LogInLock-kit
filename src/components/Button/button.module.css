@@ -1,0 +1,146 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: .5rem;
+  gap: .375rem;
+  min-width: 32px;
+  padding: .5rem;
+  box-sizing: border-box;
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+  cursor: pointer;
+}
+
+.btn > img {
+  transition: all .3s cubic-bezier(.4,0,.2,1);
+}
+
+/* PRIMARY  */
+
+.btn.primary {
+  color: var(--y-text-inverse);
+  stroke: var(--y-text-inverse);
+  background-color: var(--y-btn-primary-bg);
+}
+
+.btn.primary:not(:disabled):hover {
+  background-color: var(--y-btn-primary-hover-bg);
+}
+
+.btn.primary:not(:disabled):active {
+  background-color: var(--y-btn-primary-active-bg);
+}
+
+.btn.primary:disabled {
+  background-color: var(--y-bg-disabled-bg);
+  color: var(--y-text-disabled);
+  cursor: not-allowed;
+}
+
+.btn.primary:disabled > img {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(0%) saturate(351%) hue-rotate(289deg) brightness(94%) contrast(97%);
+}
+
+/* TEXT  */
+
+.btn.text {
+  color: var(--y-btn-primary-text);
+  border: none;
+  background-color: transparent;
+}
+
+.btn.text > img {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(65%) saturate(494%) hue-rotate(130deg) brightness(97%) contrast(98%);
+}
+
+.btn.text:not(:disabled):hover {
+  color: var(--y-scales-brand-blue-20);
+}
+
+.btn.text:not(:disabled):active {
+  color: var(--y-scales-brand-blue-80);
+}
+
+.btn.text:not(:disabled):hover > img {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(64%) saturate(573%) hue-rotate(129deg) brightness(95%) contrast(96%);
+}
+
+.btn.text:not(:disabled):active > img {
+  filter: brightness(0) saturate(100%) invert(33%) sepia(42%) saturate(1344%) hue-rotate(137deg) brightness(95%) contrast(85%);
+}
+
+/* Outlined */
+.btn.outlined {
+  border: 1px solid rgb(226 232 240);
+  background-color: transparent;
+  color: var(--y-btn-text);
+}
+
+.btn.outlined > img {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(6%) saturate(2075%) hue-rotate(178deg) brightness(93%) contrast(85%);
+}
+
+.btn.outlined:not(:disabled):hover {
+  background-color: var(--y-btn-primary-bg);
+  color: var(--y-text-inverse);
+}
+
+.btn.outlined:not(:disabled):hover > img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(285deg) brightness(108%) contrast(101%);
+}
+
+.btn.outlined:not(:disabled):active {
+  background-color: var(--y-scales-brand-blue-40);
+}
+
+.btn.outlined:disabled, .btn.text:disabled {
+  color: var(--y-text-disabled);
+  cursor: not-allowed;
+}
+
+.btn.outlined:disabled > img, .btn.text:disabled > img {
+  filter: brightness(0) saturate(100%) invert(68%) sepia(0%) saturate(351%) hue-rotate(289deg) brightness(94%) contrast(97%);
+}
+
+/* SMALL */
+
+.btn.sm > img {
+  max-height: 1.25rem;
+}
+
+.btn.sm {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+/* MEDIUM */
+
+.btn.md > img {
+  max-height: 1.5rem;
+}
+
+.btn.md {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+  min-width: 38px;
+  padding: 1rem;
+  gap: .5rem;
+}
+
+/* LARGE */
+
+.btn.lg > img {
+  max-height: 1.75rem;
+}
+
+.btn.lg {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  min-width: 42px;
+  padding: 1rem 1.5rem;
+  gap: .5rem;
+}

@@ -1,17 +1,40 @@
 {
-  "name": "logilock-kit",
-  "private": true,
-  "version": "0.1.0",
+  "name": "loginlock-kit",
+  "version": "0.2.0",
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": {
+    "name": "Jesús Mendoza Verduzco",
+    "email": "loginlock22@gmail.com",
+    "github": "https://github.com/Chucky22Mendoza",
+    "url": "https://jesus-mendoza.pages.dev/"
+  },
+  "repository": {
+    "url": "https://github.com/Chucky22Mendoza/LogInLock-kit",
+    "type": "github"
+  },
+  "homepage": "https://loginlock-kit.pages.dev",
+  "license": "MIT",
+  "description": "A collection of casual, reusable React components for building modern UIs, including buttons, cards, modals, and other essential UI elements.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "vitest --ui"
   },
+  "keywords": [
+    "react",
+    "component-library",
+    "UI-kit",
+    "spinner",
+    "divider",
+    "badge",
+    "loading-spinner"
+  ],
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
