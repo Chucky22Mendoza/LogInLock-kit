@@ -51,6 +51,8 @@ export const Primary: Story = {
     size: 'sm',
     variant: 'primary',
     children: 'Small',
+    href: 'https://github.com/Chucky22Mendoza/LogInLock-kit',
+    target: '_blank',
   },
 };
 
